@@ -41,19 +41,15 @@ MongoDB Compass is a graphical query tool that runs on all major platforms. You 
 
 ### Accessing using Client Library
 
-The lab will use the Java client library. An example code file called `SampleBigtable.java` is in the lab. This sample creates a table, writes data, reads data, then deletes the table. There is [more information on this "Hello world" example](https://cloud.google.com/bigtable/docs/samples-java-hello-world).
+The lab will use the Java client library. An example code file called `SampleMongo.java` is in the lab. <!-- This sample creates a table, writes data, reads data, then deletes the table. There is [more information on this "Hello world" example](https://cloud.google.com/bigtable/docs/samples-java-hello-world). -->
 
-For setup, follow [these instructions](https://cloud.google.com/docs/authentication/provide-credentials-adc).
-
-You will need to install the Google Cloud CLI then run the command: `gcloud auth application-default login`.
 
 ## Tasks
 
-To test your database, write Java code using VS Code. The file to edit is `Bigtable.java`.  The test file is `TestBigtable.java`.  Fill in the methods requested (search for **TODO**).  Marks for each method are below.  You receive the marks if you pass the JUnit tests AND have followed the requirements asked in the question (including documentation and proper formatting).
+To test your database, write Java code using VS Code. The file to edit is `MongoDB.java`.  The test file is `TestMongoDB.java`.  Fill in the methods requested (search for **TODO**).  Marks for each method are below.  You receive the marks if you pass the JUnit tests AND have followed the requirements asked in the question (including documentation and proper formatting).
 
-- +1 mark - Write the method `connect()` to create a connection. Create a Bigtable data client and admin client. See [SampleBigtable.java](SampleBigtable.java) for starter code.
-- +1 mark - Write the method `createTable()` to create a table to store the sensor data.
-- +5 marks - Write the method `load()` to load the sensor data into the database. The data files are in the [data](src/data) folder. 
+- +1 mark - Write the method `connect()` to create a connection. 
+- +4 marks - Write the method `load()` to load the sensor data into the database. The data files are in the [data](src/data) folder. 
 - +3 marks - Write the method `query1()` that returns the temperature at Vancouver on 2022-10-01 at 10 a.m.
 - +3 marks - Write the method `query2()` that returns the highest wind speed in the month of September 2022 in Portland.
 - +3 marks - Write the method `query3()` that returns all the readings for SeaTac for October 2, 2022.
@@ -64,7 +60,7 @@ To test your database, write Java code using VS Code. The file to edit is `Bigta
 
 ## Bonus Marks: (up to 2)
 
-Up to +2 bonus marks for demonstrating some other feature of Google Cloud Bigtable or writing your own unique query and test case.
+Up to +2 bonus marks for demonstrating some other feature of MongoDB Atlas.
 
 ## Submission
 
