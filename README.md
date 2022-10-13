@@ -1,40 +1,43 @@
-# COSC 516 - Cloud Databases<br/>Lab 3 - Google Cloud Bigtable
+# COSC 516 - Cloud Databases<br/>Lab 4 - MongoDB Atlas
 
 ## Setup
 
-Create a Google Cloud free tier account at: [https://cloud.google.com/free](https://cloud.google.com/free).
+Create a MongoDB Atlas account at: [https://www.mongodb.com/cloud/atlas/register](https://www.mongodb.com/cloud/atlas/register)  [Tutorial](https://www.mongodb.com/docs/atlas/tutorial/deploy-free-tier-cluster/).
 
-The free tier account allows for free trials for certain products and $300 in free credits for new users. In a Canvas announcement there is also the option to get an additional $50 USD credit for use with this course. You will need an email address and credit card to sign up. 
+MongoDB Atlas supports a free cluster with up to 512 MB storage. No credit card is required.
 
-## Google Cloud Portal
+## Create a Free M0 Cluster
 
-Login to Google Cloud. In the Google Cloud Portal, search for `Bigtable`, click on `Bigtable` then `Create Instance`.
+Login to Atlas. Create a free M0 cluster. Provide a cluster name.
 
-![Google Cloud Portal](img/1_google_cloud_portal.png)
+![Create Free Cluster](img/1_create_free_atlas_cluster.png)
 
-## Create Google Cloud Bigtable Instance
+## Specify Authentication
 
-Click on `Create Instance`. Given your instance a name.
+Create a database user account with a password. Add your IP address to allow access to the cluster from your machine. 
 
-<img src="img/2a_create_instance_name.png" alt="Create Google Bigtable Instance with a Name" width="800">
+<img src="img/2_add_user_and_ip.png" alt="Specify User/Password and IP Addresses with Access" width="800">
 
-Select `SSD` as the storage type.
+On the dashboard, there is information about the cluster. To get connection information, click on  `Connect` button. 
 
-<img src="img/2b_create_instance_ssd.png" alt="Use SSD Storage" width="800">
+<img src="img/3_cluster_info.png" alt="Cluster Information" width="800">
 
-The cluster id should be automatically assigned, but you may change it. The cheapest region is `us-central1 (Iowa)`. It is also possible to use `northamerica-northeast2 (Toronto)`.
+## Connecting to the Cluster
 
-<img src="img/2c_create_instance_cluster.png" alt="Create Cluster with One Node" width="1000">
+Connecting to MongoDB cluster can be done using MongoDB shell, Mongo Compass application, or using a language library.
 
-**The cost of a 1 node cluster is $.70 USD per hour. Make sure you destroy cluster as soon as you are complete and only have a cluster active while you are working on the assignment.**
+<img src="img/4_connect_types.png" alt="Connection Types" width="800">
 
-## Connecting to the Instance
+<img src="img/5_compass_connect_url.png" alt="Compass Connection URL" width="800">
 
-Connecting to the database can be done using the cbt command-line tool or using a Bigtable client library. Google Cloud Bigtable is not a relational database and is **NOT** accessible using SQuirreL or other SQL tools.
+### Connecting using MongoDB Compass
 
-### Accessing using cbt command-line tool
+MongoDB Compass is a graphical query tool that runs on all major platforms. You can download and install it directly from the connection screen shown previously.To connect, provide the connection string for the cluster. It is possible to insert, query, and browse data.
 
-The cbt command-line interface allows performing basic administrative tasks and reading/writing data from tables. There is a [tutorial on cbt CLI](https://cloud.google.com/bigtable/docs/create-instance-write-data-cbt-cli?_ga=2.111890764.-913511634.1664467746).
+<img src="img/6_connect_with_compass.png" alt="Connecting with Compass" width="800">
+
+<img src="img/7_compass_browse_data.png" alt="Querying with Compass" width="800">
+
 
 ### Accessing using Client Library
 
