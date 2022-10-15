@@ -2,7 +2,7 @@
 
 ## Setup
 
-Create a MongoDB Atlas account at: [https://www.mongodb.com/cloud/atlas/register](https://www.mongodb.com/cloud/atlas/register)  [Tutorial](https://www.mongodb.com/docs/atlas/tutorial/deploy-free-tier-cluster/).
+Create a MongoDB Atlas account at: [https://www.mongodb.com/cloud/atlas/register](https://www.mongodb.com/cloud/atlas/register).  There is a [tutorial](https://www.mongodb.com/docs/atlas/tutorial/deploy-free-tier-cluster/).
 
 MongoDB Atlas supports a free cluster with up to 512 MB storage. No credit card is required.
 
@@ -24,7 +24,7 @@ On the dashboard, there is information about the cluster. To get connection info
 
 ## Connecting to the Cluster
 
-Connecting to MongoDB cluster can be done using MongoDB shell, Mongo Compass application, or using a language library.
+Connecting to MongoDB cluster can be done using MongoDB shell, MongoDB Compass application, or using a language library.
 
 <img src="img/4_connect_types.png" alt="Connection Types" width="800">
 
