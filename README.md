@@ -43,17 +43,27 @@ MongoDB Compass is a graphical query tool that runs on all major platforms. You 
 
 The lab will use the Java client library. An example code file called `SampleMongo.java` is in the lab. <!-- This sample creates a table, writes data, reads data, then deletes the table. There is [more information on this "Hello world" example](https://cloud.google.com/bigtable/docs/samples-java-hello-world). -->
 
+### References
+
+- [MongoDB Introduction](https://docs.mongodb.org/manual/core/introduction/)
+- [Creating a Collection](https://docs.mongodb.org/manual/reference/method/db.createCollection/)
+- [Modifying Documents](https://docs.mongodb.org/manual/tutorial/modify-documents/)
+- [Querying using find()](https://docs.mongodb.org/manual/reference/method/db.collection.find/)
+- [Mongo Java Driver API](https://mongodb.github.io/mongo-java-driver/4.4/apidocs/mongodb-driver-core/com/mongodb/package-summary.html)
 
 ## Tasks
 
 To test your database, write Java code using VS Code. The file to edit is `MongoDB.java`.  The test file is `TestMongoDB.java`.  Fill in the methods requested (search for **TODO**).  Marks for each method are below.  You receive the marks if you pass the JUnit tests AND have followed the requirements asked in the question (including documentation and proper formatting).
 
-- +1 mark - Write the method `connect()` to create a connection. 
-- +4 marks - Write the method `load()` to load the sensor data into the database. The data files are in the [data](src/data) folder. 
-- +3 marks - Write the method `query1()` that returns the temperature at Vancouver on 2022-10-01 at 10 a.m.
-- +3 marks - Write the method `query2()` that returns the highest wind speed in the month of September 2022 in Portland.
-- +3 marks - Write the method `query3()` that returns all the readings for SeaTac for October 2, 2022.
-- +4 marks - Write the method `query4()` that returns the highest temperature at any station in the summer months of 2022 (July (7), August (8)).
+- +2 marks - Write the method `load()` to load the TPC-H `customer` and `orders` data into separate collections (like how it would be stored in a relational model). The data files are in the [data](src/data) folder. 
+- +3 marks - Write the method `loadNest()` to load the TPC-H customer and order data into a nested collection called `custorders` where each document contains the customer information and all orders for that customer.
+- +1 marks - Write the method `query1()` that returns the customer name given a customer id using the `customer` collection.
+- +2 marks - Write the method `query2()` that returns the order date for a given order id using the `orders` collection.
+- +2 marks - Write the method `query2Nest()` that returns order date for a given order id using the `custorders` collection.
+- +2 marks - Write the method `query3()` that returns the total number of orders using the `orders` collection.
+- +2 marks - Write the method `query3Nest()` that returns the total number of orders using the `custorders` collection.
+- +3 marks - Write the method `query4()` that returns the top 5 customers based on total order amount using the `customer` and `orders` collections.
+- +3 marks - Write the method `query4Nest()` that returns the top 5 customers based on total order amount using the `custorders` collection.
 
 **Total Marks: 20**
 
