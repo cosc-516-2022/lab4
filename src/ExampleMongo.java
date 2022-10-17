@@ -29,8 +29,8 @@ public class ExampleMongo {
 		String url = "";
 
 		try (
-				// Provide connection information to MongoDB server
-				MongoClient mongoClient = MongoClients.create(url);) {
+			// Provide connection information to MongoDB server
+			MongoClient mongoClient = MongoClients.create(url);) {
 			// Provide database information to connect to
 			MongoDatabase db = mongoClient.getDatabase("cosc516");
 
